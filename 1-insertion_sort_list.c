@@ -13,10 +13,9 @@ void insertion_sort_list(listint_t **list)
 	listint_t *current;
 	listint_t *d_prev;
 
-	cursor = *list;
-	if (list && cursor && cursor->next)
+	if (list && *list && (*list)->next)
 	{
-		cursor = cursor->next;
+		cursor = (*list)->next;
 		for (; cursor ; cursor = cursor->next)
 		{
 			current = cursor;

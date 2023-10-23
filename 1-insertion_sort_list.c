@@ -12,32 +12,19 @@ void insertion_sort_list(listint_t **list)
 	listint_t *cursor;
 	listint_t *current;
 	listint_t *d_prev;
-	
+
 	cursor = *list;
-	if(list && cursor && cursor->next)
+	if (list && cursor && cursor->next)
 	{
 		cursor = cursor->next;
-		for(; cursor ; cursor = cursor->next)
+		for (; cursor ; cursor = cursor->next)
 		{
 			current = cursor;
 
-			while(current->prev && (current->n < current->prev->n))
+			while (current->prev && (current->n < current->prev->n))
 			{
 				if (current->n < current->prev->n)
 				{
-					/**
-					 * curr->prev->next = curr->next;
-					 * curr->next->prev= curr->prev;
-					 *
-					 * d_prev = curr->prev->prev->next;
-					 *
-					 * curr->prev->prev->next = curr;
-					 * curr->prev->prev = curr;
-					 *
-					 * curr->next = curr->prev;
-					 * curr->prev = d_prev;
-					 *
-					 * */
 					current->prev->next = current->next;
 					if (current->next)
 					{
@@ -61,5 +48,4 @@ void insertion_sort_list(listint_t **list)
 			}
 		}
 	}
-	return;
 }

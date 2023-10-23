@@ -14,7 +14,7 @@ void insertion_sort_list(listint_t **list)
 	listint_t *d_prev;
 	
 	cursor = *list;
-	if(cursor && cursor->next)
+	if(list && cursor && cursor->next)
 	{
 		cursor = cursor->next;
 		for(; cursor ; cursor = cursor->next)

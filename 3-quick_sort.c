@@ -65,5 +65,8 @@ void quick_sort_recurs(int *array, size_t low, size_t high, size_t size)
 }
 void quick_sort(int *array, size_t size)
 {
-	quick_sort_recurs(array, 0, size - 1, size);
+	if (size > 1)
+	{
+		quick_sort_recurs(array, 0, size - 1, size);
+	}
 }

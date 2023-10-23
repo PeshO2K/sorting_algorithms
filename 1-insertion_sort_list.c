@@ -12,8 +12,7 @@ void insertion_sort_list(listint_t **list)
 	listint_t *cursor;
 	listint_t *current;
 	listint_t *d_prev;
-	int i = 0;
-
+	
 	cursor = *list;
 	if(cursor && cursor->next)
 	{
@@ -57,7 +56,6 @@ void insertion_sort_list(listint_t **list)
 					{
 						*list = current;
 					}
-
 					print_list(*list);
 				}
 			}
